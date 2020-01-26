@@ -8,20 +8,20 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/guests")
 public class GuestWebServices {
-    private final GuestRepository repository;
+  private final GuestRepository repository;
 
-    public GuestWebServices(GuestRepository repository){
-        super();
-        this.repository = repository;
-    }
+  public GuestWebServices(GuestRepository repository) {
+    super();
+    this.repository = repository;
+  }
 
-    @GetMapping
-    public Iterable<Guest> getAllGuests(){
-        return this.repository.findAll();
-    }
+  @GetMapping
+  public Iterable<Guest> getAllGuests() {
+    return this.repository.findAll();
+  }
 
-    @GetMapping("/{id}")
-    public Guest getGuest(@PathVariable("id")long id){
-        return this.repository.findById(id).get();
-    }
+  @GetMapping("/{id}")
+  public Guest getGuest(@PathVariable("id") long id) {
+    return this.repository.findById(id).get();
+  }
 }

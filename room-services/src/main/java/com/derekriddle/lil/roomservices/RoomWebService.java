@@ -8,20 +8,20 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/rooms")
 public class RoomWebService {
-    private final RoomRepository repository;
+  private final RoomRepository repository;
 
-    public RoomWebService(RoomRepository repository){
-        super();
-        this.repository = repository;
-    }
+  public RoomWebService(RoomRepository repository) {
+    super();
+    this.repository = repository;
+  }
 
-    @GetMapping
-    public Iterable<Room> getAllRooms(){
-        return this.repository.findAll();
-    }
+  @GetMapping
+  public Iterable<Room> getAllRooms() {
+    return this.repository.findAll();
+  }
 
-    @GetMapping("/{id}")
-    public Room getRoom(@PathVariable("id")long id){
-        return this.repository.findById(id).get();
-    }
+  @GetMapping("/{id}")
+  public Room getRoom(@PathVariable("id") long id) {
+    return this.repository.findById(id).get();
+  }
 }

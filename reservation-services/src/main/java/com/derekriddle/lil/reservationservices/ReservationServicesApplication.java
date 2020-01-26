@@ -8,8 +8,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @EnableDiscoveryClient
 public class ReservationServicesApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(ReservationServicesApplication.class, args);
-    }
-
+  public static void main(String[] args) {
+    SpringApplication.run(ReservationServicesApplication.class, args);
+  }
 }

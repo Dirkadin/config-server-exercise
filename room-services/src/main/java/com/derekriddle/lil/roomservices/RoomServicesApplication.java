@@ -8,8 +8,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @EnableDiscoveryClient
 public class RoomServicesApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(RoomServicesApplication.class, args);
-    }
-
+  public static void main(String[] args) {
+    SpringApplication.run(RoomServicesApplication.class, args);
+  }
 }

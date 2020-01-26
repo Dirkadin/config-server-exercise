@@ -1,56 +1,54 @@
 package com.derekriddle.lil.reservationservices;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.sql.Date;
 
 @Entity
-@Table(name="RESERVATION")
+@Table(name = "RESERVATION")
 public class Reservation {
-    @Id
-    @Column(name="RESERVATION_ID")
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
-    @Column(name="ROOM_ID")
-    private long roomId;
-    @Column(name="GUEST_ID")
-    private long guestId;
-    @Column(name="RES_DATE")
-    private Date date;
+  @Id
+  @Column(name = "RESERVATION_ID")
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private long id;
 
-    public long getId() {
-        return id;
-    }
+  @Column(name = "ROOM_ID")
+  private long roomId;
 
-    public void setId(long id) {
-        this.id = id;
-    }
+  @Column(name = "GUEST_ID")
+  private long guestId;
 
-    public long getRoomId() {
-        return roomId;
-    }
+  @Column(name = "RES_DATE")
+  private Date date;
 
-    public void setRoomId(long roomId) {
-        this.roomId = roomId;
-    }
+  public long getId() {
+    return id;
+  }
 
-    public long getGuestId() {
-        return guestId;
-    }
+  public void setId(long id) {
+    this.id = id;
+  }
 
-    public void setGuestId(long guestId) {
-        this.guestId = guestId;
-    }
+  public long getRoomId() {
+    return roomId;
+  }
 
-    public Date getDate() {
-        return date;
-    }
+  public void setRoomId(long roomId) {
+    this.roomId = roomId;
+  }
 
-    public void setDate(Date date) {
-        this.date = date;
-    }
+  public long getGuestId() {
+    return guestId;
+  }
+
+  public void setGuestId(long guestId) {
+    this.guestId = guestId;
+  }
+
+  public Date getDate() {
+    return date;
+  }
+
+  public void setDate(Date date) {
+    this.date = date;
+  }
 }
