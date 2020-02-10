@@ -1,0 +1,13 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="config-server" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.derekriddle.lil.configserver.ConfigServerApplication" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <envs>
+      <env name="SPRING_CLOUD_CONFIG_SERVER_GIT_URI" value="https://github.com/Dirkadin/config.git" />
+    </envs>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
